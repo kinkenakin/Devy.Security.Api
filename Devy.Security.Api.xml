@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Devy.Security.Api</name>
+    </assembly>
+    <members>
+        <member name="F:Devy.Security.Api.Caching.CacheExtensions.CacheSet">
+            <summary>
+            The cache set
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.CacheExtensions.SetCacheProvider(Devy.Security.Api.Caching.ICacheProvider)">
+            <summary>
+            Set which cache provider we are using - must be called be client
+            </summary>
+            <param name="provider">The provider.</param>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.CacheExtensions.RemoveFromCache(System.String)">
+            <summary>
+            Removes from cache.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.CacheExtensions.GetFromCache(System.String)">
+            <summary>
+            Gets from cache.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException">Please set cache provider (call SetCacheProvider) before using caching</exception>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.CacheExtensions.AddToCache(System.Object,System.String)">
+            <summary>
+            Adds to cache.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="key">The key.</param>
+            <exception cref="T:System.InvalidOperationException">Please set cache provider (call SetCacheProvider) before using caching</exception>
+        </member>
+        <member name="T:Devy.Security.Api.Caching.CacheSettings">
+            <summary>
+            This class defines properties for Cache settings
+            </summary>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.CacheSettings.CacheKey">
+            <summary>
+            Gets or sets the cache key.
+            </summary>
+            <value>
+            The cache key.
+            </value>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.CacheSettings.Region">
+            <summary>
+            Gets or sets the region.
+            </summary>
+            <value>
+            The region.
+            </value>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.CacheSettings.Duration">
+            <summary>
+            Gets or sets the duration for the cache object.
+            </summary>
+            <value>
+            The duration.
+            </value>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.CacheSettings.Priority">
+            <summary>
+            Gets or sets the priority.
+            </summary>
+            <value>
+            The priority.
+            </value>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.CacheSettings.DataTags">
+            <summary>
+            Gets or sets the list of data tags.
+            </summary>
+            <value>
+            The data tags.
+            </value>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.CacheSettings.IsSlidingCache">
+            <summary>
+            Gets or sets a value indicating whether this instance is sliding cache.
+            </summary>
+            <value>
+            <c>true</c> if this instance is sliding cache; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Devy.Security.Api.Caching.ICacheProvider">
+            <summary>
+            Interface for cache providers - replace the specific
+            </summary>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.ICacheProvider.NumberOfEntries">
+            <summary>
+            Gets the number of entries.
+            </summary>
+            <value>
+            The number of entries.
+            </value>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.ICacheProvider.RemoveFromCache(System.String)">
+            <summary>
+            Remove any object based on key
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.ICacheProvider.GetFromCache(System.String)">
+            <summary>
+            Gets from cache.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.ICacheProvider.AddToCache(System.Object,System.String)">
+            <summary>
+            Adds to cache.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="key">The key.</param>
+        </member>
+        <member name="T:Devy.Security.Api.Caching.InMemCacheProvider">
+            <summary>
+            Enterprise library cache provider
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devy.Security.Api.Caching.InMemCacheProvider" /> class.
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.Flush">
+            <summary>
+            Flushes the cache
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.GetInstance">
+            <summary>
+            Gets the cache provider instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.LoadCacheSetting(System.String)">
+            <summary>
+            Loads the cache setting.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.RemoveFromCache(System.String)">
+            <summary>
+            Removes item from cache
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.GetFromCache(System.String)">
+            <summary>
+            Gets from cache.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Devy.Security.Api.Caching.InMemCacheProvider.AddToCache(System.Object,System.String)">
+            <summary>
+            Adds to cache.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="key">The key.</param>
+        </member>
+        <member name="P:Devy.Security.Api.Caching.InMemCacheProvider.NumberOfEntries">
+            <summary>
+            Gets the number of entries.
+            </summary>
+            <value>
+            The number of entries.
+            </value>
+        </member>
+        <member name="M:Devy.Security.Api.Application.Query.CreateEmployeeContactsCommandHandler.#ctor(Devy.Security.Infrastructure.DevySecurityContext,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devy.Security.Api.Application.Query.CreateEmployeeContactsCommandHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Application.Query.CreateEmployeeContactsCommandHandler.Handle(Devy.Security.Api.Application.Query.CreateEmployeeContactsCommand,System.Threading.CancellationToken)">
+            <summary>
+            Handles a request
+            </summary>
+            <param name="request">The request</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns>
+            Response from the request
+            </returns>
+        </member>
+        <member name="M:Devy.Security.Api.Application.Query.ListEmployeeContactsQueryHandler.#ctor(Devy.Security.Infrastructure.DevySecurityContext,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devy.Security.Api.Application.Query.ListEmployeeContactsQueryHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Application.Query.ListEmployeeContactsQueryHandler.Handle(Devy.Security.Api.Application.Query.ListEmployeeContactsQuery,System.Threading.CancellationToken)">
+            <summary>
+            Handles a request
+            </summary>
+            <param name="request">The request</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns>
+            Response from the request
+            </returns>
+        </member>
+        <member name="M:Devy.Security.Api.Application.Query.ListLocationsQueryHandler.#ctor(Devy.Security.Infrastructure.DevySecurityContext,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devy.Security.Api.Application.Query.ListLocationsQueryHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:Devy.Security.Api.Application.Query.ListLocationsQueryHandler.Handle(Devy.Security.Api.Application.Query.ListLocationsQuery,System.Threading.CancellationToken)">
+            <summary>
+            Handles a request
+            </summary>
+            <param name="request">The request</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns>
+            Response from the request
+            </returns>
+        </member>
+        <member name="M:Devy.Security.Api.AutoMapperConfig.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Devy.Security.Api.Controllers.EmployeeCommandController">
+            <summary>
+            Controllers for alert executions
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Devy.Security.Api.Controllers.EmployeeQueryController" -->
+        <!-- Badly formed XML comment ignored for member "T:Devy.Security.Api.Controllers.LocationQueryController" -->
+        <member name="M:Devy.Security.Api.InitializerExtensions.InitializerAppExtensions.InitializeApplicationSettings(Devy.Security.Api.AppSettings,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes the application settings.
+            </summary>
+            <param name="appSettings">The application settings.</param>
+            <param name="configuration">The configuration.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

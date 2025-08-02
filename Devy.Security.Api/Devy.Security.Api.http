@@ -1,0 +1,6 @@
+@Devy.Security.Api_HostAddress = http://localhost:5194
+
+GET {{Devy.Security.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
